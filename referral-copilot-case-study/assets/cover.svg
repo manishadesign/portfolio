@@ -1,0 +1,88 @@
+<svg width="1400" height="680" viewBox="0 0 1400 680" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&amp;family=Lora:wght@600&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="680" fill="#053BEE"/>
+
+  <!-- Decorative circle — top right -->
+  <circle cx="1380" cy="-60" r="480" fill="none" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Decorative circle — bottom right -->
+  <circle cx="1160" cy="780" r="320" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Content group -->
+  <g font-family="'DM Sans', -apple-system, Helvetica Neue, sans-serif">
+
+    <!-- Label -->
+    <text
+      x="96" y="152"
+      font-size="11"
+      font-weight="500"
+      letter-spacing="1.4"
+      fill="white"
+      fill-opacity="0.5"
+    >INNOVACCER · REFERRAL MANAGEMENT · MVP · AI WORKFLOW DESIGN</text>
+
+    <!-- H1 -->
+    <text
+      x="94" y="282"
+      font-family="'Lora', Georgia, serif"
+      font-size="80"
+      font-weight="600"
+      letter-spacing="-1.6"
+      fill="white"
+    >Referral Copilot</text>
+
+    <!-- Subtitle -->
+    <text
+      x="96" y="336"
+      font-size="19"
+      font-weight="300"
+      fill="#F2F5FF"
+      fill-opacity="0.9"
+    >
+      <tspan x="96" dy="0">In specialty care, a referral isn't complete when it's received — it's complete when the</tspan>
+      <tspan x="96" dy="30">patient's appointment is booked. Everything in between: outreach, scheduling, back-and-forth —</tspan>
+      <tspan x="96" dy="30">is where coordinator hours go. Referral Copilot handles that entire leg autonomously.</tspan>
+    </text>
+
+    <!-- Divider -->
+    <line
+      x1="96" y1="466"
+      x2="960" y2="466"
+      stroke="white"
+      stroke-opacity="0.12"
+      stroke-width="1"
+    />
+
+    <!-- Meta: Role -->
+    <g>
+      <text x="96" y="492" font-size="11" font-weight="500" letter-spacing="1.1" fill="white" fill-opacity="0.4">ROLE</text>
+      <text x="96" y="514" font-size="14" fill="white" fill-opacity="0.75">Lead Product Designer</text>
+    </g>
+
+    <!-- Meta: Organization -->
+    <g>
+      <text x="290" y="492" font-size="11" font-weight="500" letter-spacing="1.1" fill="white" fill-opacity="0.4">ORGANIZATION</text>
+      <text x="290" y="514" font-size="14" fill="white" fill-opacity="0.75">Innovaccer</text>
+    </g>
+
+    <!-- Meta: Timeline -->
+    <g>
+      <text x="484" y="492" font-size="11" font-weight="500" letter-spacing="1.1" fill="white" fill-opacity="0.4">TIMELINE</text>
+      <text x="484" y="514" font-size="14" fill="white" fill-opacity="0.75">2025 – 2026</text>
+    </g>
+
+    <!-- Meta: Type -->
+    <g>
+      <text x="638" y="492" font-size="11" font-weight="500" letter-spacing="1.1" fill="white" fill-opacity="0.4">TYPE</text>
+      <text x="638" y="514" font-size="14" fill="white" fill-opacity="0.75">AI Workflow · Healthcare · MVP</text>
+    </g>
+
+  </g>
+
+</svg>
