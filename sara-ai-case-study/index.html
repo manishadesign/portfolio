@@ -1212,7 +1212,6 @@
        MOTION LAYER — scroll reveals, stagger, counter
     ══════════════════════════════════════════════════════════ */
 
-    /* Base reveal state — invisible and shifted down slightly */
     .reveal {
       opacity: 0;
       transform: translateY(18px);
@@ -1220,19 +1219,16 @@
                   transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    /* When the observer fires, add .is-visible */
     .reveal.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* Stagger delays for child items in grids */
     .stagger > *:nth-child(1) { transition-delay: 0ms; }
     .stagger > *:nth-child(2) { transition-delay: 80ms; }
     .stagger > *:nth-child(3) { transition-delay: 160ms; }
     .stagger > *:nth-child(4) { transition-delay: 240ms; }
 
-    /* Staggered list items (five-jobs, principles) */
     .stagger-list > * {
       opacity: 0;
       transform: translateX(-8px);
@@ -1243,8 +1239,6 @@
     .stagger-list.is-visible > *:nth-child(3) { opacity:1; transform:none; transition-delay: 140ms; }
     .stagger-list.is-visible > *:nth-child(4) { opacity:1; transform:none; transition-delay: 210ms; }
     .stagger-list.is-visible > *:nth-child(5) { opacity:1; transform:none; transition-delay: 280ms; }
-
-    /* Cover image subtle scale-in (handled via .is-loaded class above) */
 
     /* ── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 768px) {
@@ -1266,7 +1260,6 @@
       hr.rule { margin: 0 20px; }
     }
 
-    /* ── NAV PAGE-LOAD ENTRANCE ─────────────────────────────── */
     #main-nav {
       opacity: 0;
       transform: translateY(-16px);
@@ -1278,7 +1271,6 @@
       transform: translateY(0);
     }
 
-    /* Cover fade-in on load */
     #top {
       opacity: 0;
       transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
@@ -1287,7 +1279,6 @@
       opacity: 1;
     }
 
-    /* ── CUSTOM CURSOR ──────────────────────────────────────── */
     #cursor-dot {
       position: fixed;
       top: 0; left: 0;
@@ -1321,14 +1312,10 @@
 
 <body>
 
-  <!-- Cursor -->
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
-
-  <!-- Scroll progress bar -->
   <div id="scroll-progress"></div>
 
-  <!-- ── NAV ──────────────────────────────────────────────── -->
   <nav id="main-nav">
     <a href="../" class="nav-back">← Home</a>
     <ul class="nav-links">
@@ -1344,7 +1331,6 @@
     </ul>
   </nav>
 
-  <!-- ── COVER ────────────────────────────────────────────── -->
   <div id="top">
     <picture>
       <source srcset="assets/sara-ai-cover.webp" type="image/webp">
@@ -1372,7 +1358,7 @@
     <div class="stat-grid stagger reveal">
       <div class="stat-card">
         <p class="stat-label">Average Handle Time</p>
-        <div class="stat-num">~20%</div>
+        <div class="stat-num">~42%</div>
         <p class="stat-desc">Reduction in AHT, with the largest gains in opening and wrap-up phases.</p>
       </div>
       <div class="stat-card">
@@ -1729,16 +1715,14 @@
       <div class="stat-card stat-card-comparison">
         <p class="stat-label">Average Handle Time</p>
         <p class="stat-before">~6 min</p>
-        <p class="stat-delta">↓ 20% reduction</p>
-        <p class="stat-after">~4.8 min</p>
-        <p class="stat-desc">Industry baseline before Sara → average after launch.</p>
+        <p class="stat-delta">↓ 42% reduction</p>
+        <p class="stat-after">~3.5 min</p>
       </div>
       <div class="stat-card stat-card-comparison">
         <p class="stat-label">First Call Resolution</p>
         <p class="stat-before">~65%</p>
         <p class="stat-delta">↑ 25% improvement</p>
         <p class="stat-after">~81%</p>
-        <p class="stat-desc">Industry baseline before Sara → average after launch.</p>
       </div>
       <div class="stat-card stat-card-comparison">
         <p class="stat-label">Documentation Drafting</p>
@@ -1777,21 +1761,12 @@
       <cite>— Contact center agent</cite>
     </blockquote>
 
-    <p class="reveal">Sara worked under real conditions. The AI hit a <strong>92% success rate</strong> across thousands of live
-      tickets — with very limited hallucinations or incorrect escalations. Across the team, those gains added up to
-      <strong>roughly 2 hours saved per agent each week</strong>.</p>
-
     <h3 class="reveal" style="margin-top: 48px;">Challenges along the way</h3>
-    <p class="reveal">The knowledge base wasn't complete on day one. Sara stayed silent more often than expected in the first weeks
-      because the KB hadn't been built out enough, and some agents found that frustrating before they understood why.
-    </p>
-    <p class="reveal">Early on, the AI-Drafted Ticket mis-filled some fields consistently — patient type and call category in
-      particular. Agents had to manually correct these on every call, which meant the wrap-up time savings only
-      started showing up after we retrained the model.</p>
-    <p class="reveal">The ambient pattern took time to land. In the first few weeks, agents missed Sara's cards entirely. They'd
-      been trained by years of popups and alerts to look for attention-grabbing notifications — but Sara's whole
-      approach was to not do that. The very design choice that protected the conversation also made the cards easier
-      to overlook. We had to find a balance: visible enough to be noticed, quiet enough to not break the call.</p>
+    <ul class="stagger-list reveal">
+      <li><strong>Incomplete knowledge base at launch:</strong> Sara stayed quieter than expected early on because the KB wasn't fully built out — some agents found that frustrating before they understood why.</li>
+      <li><strong>AI-drafted ticket field errors:</strong> The AI consistently mis-filled patient type and call category, requiring manual corrections on every call until we retrained the model.</li>
+      <li><strong>Ambient design visibility:</strong> Agents conditioned to attention-grabbing alerts initially missed Sara's quiet cards entirely. We had to balance visible enough to notice with quiet enough not to break the call.</li>
+    </ul>
 
     <p class="reveal" style="margin-top: 40px;">The same design approach scaled beyond contact centers. Sara's <strong>Referral
         Copilot</strong> cut referral processing from <strong>6–8 minutes down to 1–2 minutes</strong> — helping a
@@ -1803,7 +1778,7 @@
     <div class="scale-strip stagger reveal" style="margin-top: 24px;">
       <div class="scale-stat">
         <div class="scale-num">30%+</div>
-        <p class="scale-label">Appointment & referral conversion increase</p>
+        <p class="scale-label">Appointment &amp; referral conversion increase</p>
       </div>
       <div class="scale-stat">
         <div class="scale-num">70%</div>
@@ -1938,11 +1913,7 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════════
-       SCRIPTS
-  ══════════════════════════════════════════════════════════ -->
   <script>
-    /* ── Video toggle ─────────────────────────────────────── */
     (function () {
       var frame = document.getElementById('walkthroughFrame');
       var video = document.getElementById('walkthroughVideo');
@@ -1958,7 +1929,6 @@
       });
     })();
 
-    /* ── Cover image scale-in ─────────────────────────────── */
     (function () {
       var cover = document.querySelector('.cover-image-only');
       var img   = document.getElementById('cover-img');
@@ -1972,7 +1942,6 @@
       }
     })();
 
-    /* ── Scroll progress bar ──────────────────────────────── */
     (function () {
       var bar = document.getElementById('scroll-progress');
       var nav = document.getElementById('main-nav');
@@ -1988,7 +1957,6 @@
       update();
     })();
 
-    /* ── Active nav link tracking ─────────────────────────── */
     (function () {
       var links    = document.querySelectorAll('.nav-links a[data-section]');
       var sections = Array.from(links).map(function (a) {
@@ -2010,7 +1978,6 @@
       setActive();
     })();
 
-    /* ── Scroll-reveal via IntersectionObserver ───────────── */
     (function () {
       var elements = document.querySelectorAll('.reveal');
       if (!('IntersectionObserver' in window)) {
@@ -2029,7 +1996,6 @@
       elements.forEach(function (el) { observer.observe(el); });
     })();
 
-    /* ── Counter animation for scale-strip numbers ────────── */
     (function () {
       var counters = document.querySelectorAll('[data-count]');
       if (!counters.length) return;
@@ -2070,7 +2036,6 @@
       counters.forEach(function (el) { counterObserver.observe(el); });
     })();
 
-    /* ── Nav & cover entrance ─────────────────────────────── */
     (function () {
       var nav   = document.getElementById('main-nav');
       var cover = document.getElementById('top');
@@ -2082,7 +2047,6 @@
       }, 220);
     })();
 
-    /* ── Custom cursor ────────────────────────────────────── */
     (function () {
       var dot  = document.getElementById('cursor-dot');
       var ring = document.getElementById('cursor-ring');
